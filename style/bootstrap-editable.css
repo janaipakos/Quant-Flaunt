@@ -1,0 +1,11 @@
+.editable-click,
+a.editable-click {
+    text-decoration: none;
+
+    color:black;}
+
+
+a.editable-click:hover {
+    text-decoration: none;
+    border-bottom: dashed 1px black;
+    color:black;}

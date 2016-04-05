@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QuantFlaunt - Your Life, Quantified</title>
+
+  <link href="style/bootstrap.css" rel="stylesheet">
+  <link href="style/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/bootstrap-table.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="style/bootstrap-table.js"></script>
+
+  <link href="style/bootstrap-editable.css" rel="stylesheet">
+  <script src="js/bootstrap-editable.js"></script>
+  <script src="js/covervid.min.js"></script>
+
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/jquery-func.js"></script>
+
+</head>
+
+<body>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target=".navbar-collapse"
+        data-toggle="collapse" type="button"><span class="icon-bar"></span>
+        <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="http://quantflaunt.github.io" class="smoothScroll" style="font-weight: bold">QUANTFLAUNT</a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#who" class="smoothScroll">Who?</a></li>
+          <li><a href="#data" class="smoothScroll">Track</a></li>
+          <li><a href="#visualize" class="smoothScroll">Visualize</a></li>
+          <li><a data-target="#myModal" data-toggle="modal" href="#myModal">Log in</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal" type="button">×</button>
+
+          <h4 class="modal-title">Log in</h4>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label> <input class=
+            "form-control" id="exampleInputEmail1" placeholder="Enter email"
+            type="email">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label> <input class=
+            "form-control" id="exampleInputPassword1" placeholder="Password"
+            type="password">
+          </div>
+
+          <p class="text-right">Contact <a href="mailto:janaipakos@gmail.com?Subject=QuantFlaunt%20Access" target="_top"><abbr title="janaipakos@gmail.com">James Anaipakos</abbr></a> for access</p>
+        </div>
+
+        <div class="modal-footer">
+          <a class="btn" data-dismiss="modal" href="#">Close</a> <a class=
+          "btn btn-primary" href="">Log-in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <div id="headerwrap">
+        <div class="covervid-wrapper">
+    <video class="covervid-video" autoplay loop poster="images\intro.png">
+        <source src="images/intro.mp4" type="video/mp4">
+    </video>
+</div>
+        <div class="content-section video-section">
+  <div class="pattern-overlay">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h1>What's your number?</h1>
+        <h2><strong>QuantFlaunt</strong> is an all-in-one library and visualization
+          tool for your curated information<br> offline and across the web</h2>
+     </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div id="about">
+  <div class="container">
+    <div class="row mt centered">
+      <div class="col-lg-6 col-lg-offset-3">
+        <h1>See the forest for the trees</h1>
+
+        <h3>QuantFlaunt helps you see the big picture by tracking as much or as
+        little information as you want. Import your activity throughout social
+        media, your hobbies during everyday life, or anything else that defines
+        you</h3>
+      </div>
+    </div>
+
+    <div class="row mt centered">
+      <div class="col-lg-4">
+        <img alt="" src="images/online.png" width="180">
+
+        <h4>1 - Curated Social Identity</h4>
+
+        <p>Are you more than your day job? No matter what you do to pay the
+        bills, QuantFlaunt lets you import all your restaurant reviews, blog posts,
+        and consumed items. It's time to share the real you.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <img alt="" src="images/work.png" width="180">
+
+        <h4>2 - Busy Offline Life</h4>
+
+        <p>Whether you're a starving artist or a venture capitalist, everyone
+        has a hobby. Now, you can keep track of not only what you do with your
+        time, but also the big picture these activities make up.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <img alt="" src="images/sleep.png" width="180">
+
+        <h4>3 - None of the Above</h4>
+
+        <p>Everyone's QuantFlaunt number is different, and that's ok. You decide your
+        identity, not an algorithm. So create a representative number that
+        weighs every activity as equal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <hr/>
+
+   <div id="who">
+   <div class="container">
+    <div class="row mt centered">
+      <div class="col-lg-6 col-lg-offset-3">
+        <h1>Who uses QuantFlaunt?</h1>
+
+        <h3>The simple answer: anyone who wants an identity</h3>
+      </div>
+    </div>
+
+    <div class="row mt centered">
+      <div class="col-lg-4">
+        <img alt="" class="img-circle" src="images/pic1.jpg" width="140">
+
+        <h4>John Roberts</h4>
+
+        <p>A recent art school graduate, John wants to build his brand and find
+        his dream job. Looking to visually display his work and
+        accomplishments, John uses QuantFlaunt to combine his portfolio and freelance
+        jobs with personal interests, resulting in one number that has everyone
+        talking.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <img alt="" class="img-circle" src="images/pic3.jpg" width="140">
+
+        <h4>Angelica Fuller</h4>
+
+        <p>A prolific blogger with thousands of followers reading her posts and
+        reviews, Angelica can oftentimes forget what social media site she is
+        active on, and to what degree. Through QuantFlaunt's social media
+        aggregation, Angelica can find all her information, all in one
+        place.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <img alt="" class="img-circle" src="images/pic2.jpg" width="140">
+
+        <h4>Peter Jane</h4>
+
+        <p>Peter gave up the 9 to 5 grind to focus on what matters: himself. By
+        tracking his record purchases, along with his eye rolls and yawns,
+        Peter can let everyone know what he's all about, and not the other way
+        around.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <hr/>
+
+
+ <div id="data">
+ <div class="container">
+    <div class="row">
+    <div class="row mt centered">
+      <div class="col-lg-6 col-lg-offset-3">
+        <h1>Data Tracking</h1>
+        <h3>Determine your own activity value and quantify your identity metrics. </h3>
+<br>
+
+      </div>
+      </div>
+
+    <div class="row">
+      <div style="float:left" class="col-md-2 col-md-offset-1">
+        <img alt="" class="img-circle" src="images/pic3.jpg" width="140">
+
+        <h4 style="text-align: center">Angelica's Data</h4>
+
+
+    <form class="input">Add Activity:
+        <input type="text" name="name" />
+        <br/>Add Action:
+        <input type="tel" name="phone" />
+        <br/>Add Value:
+        <input type="email" name="email" />
+        <br/>
+        <button class="btn btn-default btn-sm" type="button" id="submit"><i class=
+            "fa fa-plus"></i>Process Identity </button>
+    </form>
+
+      </div>
+
+
+
+
+<div id="user" class="col-md-8">
+        <table id="mt" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Action</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><a href="#" data-name="username" data-type="text" title="Activity" class="editable-click">QuantFlaunt</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Action" class="editable-click">Signed up</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Value" class="editable-click">1</td>
+            </tr>
+
+            <tr>
+              <td><a href="#" data-name="username" data-type="text" title="Activity" class="editable-click">Behance</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Action" class="editable-click">Posted web application</td>
+              <td><a href="#" data-name="username" data-type="text" title="Value" class="editable-click">1</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="#" data-name="username" data-type="text" title="Activity" class="editable-click">Photography</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Action" class="editable-click">Took selfie</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Value" class="editable-click">2</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="#" data-name="username" data-type="text" title="Activity" class="editable-click">Yelp</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Action" class="editable-click">Reviewed restaurants</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Value" class="editable-click">10</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="#" data-name="username" data-type="text" title="Activity" class="editable-click">Fetishization</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Action" class="editable-click">Followed Beyoncé on Twitter</a></td>
+              <td><a href="#" data-name="username" data-type="text" title="Value" class="editable-click">300</a></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<hr/>
+
+ <div id="visualize">
+ <div class="container">
+    <div class="row">
+    <div class="row mt centered">
+      <div class="col-lg-6 col-lg-offset-3">
+        <h1>Number Visualization</h1>
+        <h3>Share and compare your representative number<br>
+      </div>
+      </div>
+
+    <div class="row">
+      <div style="float:left" class="col-md-2 col-md-offset-1">
+        <img alt="" class="img-circle" src="images/pic1.jpg" width="140">
+
+        <h4 style="text-align: center">John's Number</h4>
+
+      </div>
+
+      <div class="col-md-8">
+        <div id="chart" style=
+        "min-height: 600px; max-height: 600px; min-width: 600px; max-width: 600px">
+        </div><br>
+      </div>
+
+    </div>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="navbar-default">
+  <div class="container">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="http://jamesanaipakos.com" style="font-weight: bold">Copyright ©James Anaipakos</a>
+  </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function () {
+
+
+
+    $('#submit').click(function () {
+        var Activity = $('input[name=name]').val();
+        var Action = $('input[name=phone]').val();
+        var Value = $('input[name=email]').val();
+
+
+        var tr = "<tr>\
+                    <td>\
+                       <div>\
+                                    <a href=\"#\" data-name=\"username\" data-type=\"text\" title=\"Activity\" class=\"editable-click\">\
+                                        " + Activity + "</a>\
+                                </div>\
+                    </td>\
+                    <td> \
+                        <div>\
+                                   <a href=\"#\" data-name=\"username\" data-type=\"text\" title=\"Activity\" class=\"editable-click\">\
+                                        " + Action + "</a>\
+                                </div>\
+                    </td>\
+                    <td>\
+                       <div>\
+                                    <a href=\"#\" data-name=\"username\" data-type=\"text\" title=\"Activity\" class=\"editable-click\">\
+                                        " + Value + "</a>\
+                                </div>\
+                    </td>\
+                </tr>;";
+        $('#mt > tbody').append(tr);
+
+        $("input[type=text]").val("");
+        $("input[type=tel]").val("");
+        $("input[type=email]").val("");
+
+    });
+});
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$(function () {
+
+    $("#addRow").click(function () {
+        var row = $("<tr><td>New Activity</td><td>New Action</td><td>New Value</td></tr>");
+        $("#mt > tbody").append(row);
+    });
+});
+});
+</script>
+
+
+<script type="text/javascript">$('#user').editable({
+  selector: 'a',
+
+  pk: 1
+});
+
+$.fn.editableform.buttons =
+  '<button type="submit" class="btn btn-link editable-submit btn-mini"><i class="glyphicon glyphicon-ok"></i></button>' +
+ '<button type="button" class="btn btn-link editable-cancel btn-mini"><i class="glyphicon glyphicon-remove"></i></button>';
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56064805-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script>
+$('.covervid-video').coverVid(1920, 1080);
+</script>
+
+
+<script type="text/javascript">
+//apply editable to parent div
+$('#user').editable({
+  selector: 'a',
+  pk: 1
+});
+</script>
+
+<script>
+//modify buttons style
+$.fn.editableform.buttons =
+  '<button type="submit" class="btn btn-link editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
+ '<button type="button" class="btn btn-link editable-cancel btn-mini"><i class="fa fa-close"></i></button>';
+</script>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
+
+<script>$(document).ready(function () {
+    $('#warning').click(function (e) {
+  e.preventDefault()
+  $('#message').html('<div class="alert alert-warning fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button><strong>Database Error</strong> Too many users updating their identity! Try again later. </div>');
+})
+});
+</script>
+
+<script>
+          var brands = {},
+                brandsData = [],
+                versions = {},
+                drilldownSeries = [];
+      chart;
+      $(document).ready(function() {
+            $('#chart').highcharts({
+            credits: {
+            enabled: false
+            },
+
+            chart: {
+
+                type: 'pie',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+
+            },
+
+
+            plotOptions: {
+            pie: {
+                innerSize: '35%',
+                allowPointSelect: false,
+                cursor: 'arrow',
+                    dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}<\/b>: {point.y} %',
+                    style: {
+                        color: (Highcharts.theme) || 'black',
+                        fontSize: "20px",
+                             }
+                                }
+
+            }
+            },
+            navigation: {
+            buttonOptions: {
+                height: 40,
+                width: 48,
+                symbolSize: 24,
+                symbolX: 23,
+                symbolY: 21,
+                symbolStrokeWidth: 2
+            }
+            },
+            title: {
+             style: {
+             fontSize: '50px',
+             fontWeight: 'bold',
+             textTransform: 'uppercase'
+                    },
+            position: {
+
+
+                            },
+            text: '80',
+            align: 'left',
+            y: 330,
+                    x: 270
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.y}%<\/b>'
+            },
+
+            drilldown:{
+                drillUpButton: {
+                relativeTo: 'spacingBox',
+                position: {
+                    y: 50,
+                    x: 0
+                            },
+                },
+
+        series: [{
+            id: 'Art',
+            name: 'Art',
+            data: [
+                ['Freelance', 10],
+                ['School', 90],
+            ]
+        },
+        {
+            id: 'Body Stuff',
+                name: 'Body Stuff',
+                data: [{
+                name: 'Yawns',
+                y: 25,
+                drilldown: 'Yawns'
+            },
+
+                    ['Panic',       25],
+                    ['Sleep',   25],
+                    ['Eye-roll',   25]
+                 ]
+            },
+            {
+            id: 'Yawns',
+            name: 'Yawns',
+            data: [{
+                name: 'Class',
+                y: 33.3,
+                drilldown: 'Class'
+            },
+                    ['Train',   33.3],
+                    ['Walking',   33.3]
+            ],
+        },
+    {
+            id: 'Class',
+            name: 'Class',
+            data: [
+                ['Design', 33.3],
+                ['Survey', 33.3],
+        ['Planning', 33.3]
+            ]
+        }]
+    },
+
+
+      series: [{
+        name: 'Identity',
+        colorByPoint: true,
+        data: [{
+            name: 'Art',
+            y: 25,
+        }, {
+            name: 'Body Stuff',
+            y: 50,
+            drilldown: 'Body Stuff'
+        }, {
+            name: 'Work',
+            y: 25,
+
+        }]
+      }]
+            });
+            });
+      </script> <script>
+// Load the fonts
+      Highcharts.createElement('link', {
+      href: 'https://fonts.googleapis.com/css?family=Signika:400,700',
+      rel: 'stylesheet',
+      type: 'text/css'
+      }, null, document.getElementsByTagName('head')[0]);
+
+      Highcharts.theme = {
+      colors: ["#3B3B3B", "#428bca", "#E84D5B", "#2BACB5", "#F5ECD9", "#DAEDE2", "#EA2E49", "#ff0066", "#eeaaee",
+      "#55BF3B", "#DF5353",],
+      chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "Signika, serif"
+      }
+      },
+      title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+      },
+      subtitle: {
+      style: {
+         color: 'black'
+      }
+      },
+      tooltip: {
+      borderWidth: 0
+      },
+      legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+      },
+
+      plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+      },
+      };
+
+      // Apply the theme
+      Highcharts.setOptions(Highcharts.theme);
+      </script>
+
+
+
+
+</body>
+</html>
