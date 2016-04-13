@@ -2,7 +2,8 @@
 QuantFlaunt: a satirical web application that explores the future of online branding and data quantification.
 
 ## Demo site:
-[https://jamesanaipakos.com/Quant-Flaunt//](https://jamesanaipakos.com/Quant-Flaunt/)
+[https://jamesanaipakos.com/Quant-Flaunt/](https://jamesanaipakos.com/Quant-Flaunt/)
+
 More information: [https://jamesanaipakos.com/quantflaunt](https://jamesanaipakos.com/quantflaunt)
 
 ## How to Use:
